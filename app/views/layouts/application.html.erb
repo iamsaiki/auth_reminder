@@ -47,7 +47,12 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
-          <%= bootstrap_flash %>
+          <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
           <%= yield %>
         </div>
   <% if !user_signed_in? %>
@@ -56,9 +61,8 @@
             <h3>Login with </h3>
             <ul class="nav nav-list">
               <li class="nav-header">SOCIAL </li>
-              <li><%= link_to "facebook login", "/path1"  %></li>
-              <li><%= link_to "twitter login", "/path2"  %></li>
-              <li><%= link_to "github login", "/path3"  %></li>
+              <li><%= link_to "google login", '/auth/google_oauth2'  %></li>
+              <li><%= link_to "github login", '/auth/github'  %></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
