@@ -31,12 +31,12 @@
         <a class="navbar-brand" href="#">AuthRem</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Home", "/path1"  %></li>
-            <li><%= link_to "Reminders", "/path2"  %></li>
+            <li><%= link_to "Home", reminders_path  %></li>
             <% if !user_signed_in? %>
-            <li><%= link_to "Account", "/path3"  %></li>
+            <li><%= link_to "About", "/path2"  %></li>
             <% end %>
             <% if user_signed_in? %>
+            <li><%= link_to "Profile",edit_user_registration_path%></li>
             <li><%= link_to "logout", destroy_user_session_path,method: :delete  %></li>
             <% end %>
           </ul>

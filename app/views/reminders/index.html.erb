@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reminders</h1>
+
+    
+    <a href=<%= "#{new_reminders_path}"%> >
+      <button type='button' class='btn btn-primary'>New Reminder</button>
+    </a><br><br>
+      <div class="col-lg-12">
+          <div class="list-group">
+           <% @reminders.each do |reminder| %>
+               <% if user_signed_in? %>
+                 <% if reminder.user_id==current_user.id&& reminder.private? %>
+                  <a href=<%= "#{reminder_path(reminder)}"%> class = "list-group-item list-group-item-action " style ="padding:12px">
+                    <div class = "container">
+                      <div class = "row">
+                        <div class="col-lg-3 float-left"><h3><%= reminder.title%></h3>
+                        </div>
+                        <div class="col-lg-3 float-right"><h5><%= reminder.timings%></h5>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <% end %>
+                  <%end %>
+                  <% if !reminder.private? %>
+                  <a href=<%= "#{reminder_path(reminder)}"%> class = "list-group-item list-group-item-action " style ="padding:12px">
+                    <div class = "container">
+                      <div class = "row">
+                        <div class="col-lg-3 float-left"><h3><%= reminder.title%></h3>
+                        </div>
+                        <div class="col-lg-3 float-right"><h5><%= reminder.timings%></h5>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                <% end %>
+           <% end %>
+          </div><!--/.well -->
+      </div><!--/span-->
+      
+<br>

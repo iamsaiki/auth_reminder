@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  body: MyText
+  timings: 2018-08-10 11:30:08
+  private: false
+  location: MyText
+  user_id: 1
+
+two:
+  title: MyString
+  body: MyText
+  timings: 2018-08-10 11:30:08
+  private: false
+  location: MyText
+  user_id: 1
