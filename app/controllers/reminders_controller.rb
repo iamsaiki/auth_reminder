@@ -28,8 +28,11 @@ class RemindersController < ApplicationController
   def create
     @reminder = Reminder.new(reminder_params)
     @reminder.user_id = current_user.id
-    respond_to do |format|
+    @user = current_user
+    respond_to do |format|  
       if @reminder.save
+
+        UserMailer.welcome_email(@user).deliver_now
         format.html { redirect_to @reminder, notice: 'Reminder was successfully created.' }
         format.json { render :show, status: :created, location: @reminder }
       else
