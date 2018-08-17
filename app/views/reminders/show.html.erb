@@ -1,34 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-primary">
+      <div class="panel-heading">  
+        <p><strong>REMINDER :  </strong><%= @reminder.title %></p>
+      </div>
+      <div class="panel-body">
+        
+    <p>
+        <strong>Body:</strong>
+        <%= @reminder.body %>
+    </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @reminder.title %>
-</p>
+     <p>
+        <strong>Timings:</strong>
+        <%= @reminder.timings %>
+     </p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @reminder.body %>
-</p>
+    <p>
+      <strong>Location:</strong>
+      <%= @reminder.location %>
+    </p>
 
-<p>
-  <strong>Timings:</strong>
-  <%= @reminder.timings %>
-</p>
 
-<p>
-  <strong>Private:</strong>
-  <%= @reminder.private %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @reminder.location %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @reminder.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_reminder_path(@reminder) %> |
-<%= link_to 'Back', reminders_path %>
+    <p><%= link_to 'Back', reminders_path %></p>
+      </div>
+</div>

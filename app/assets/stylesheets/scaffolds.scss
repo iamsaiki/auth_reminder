@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: #5f6063;
   color: #333;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -81,4 +81,15 @@ div {
 
 label {
   display: block;
+}
+.footer{
+      background-color:   #262626;
+      position: fixed;
+      margin-left:0px;
+      height: 100px;
+      bottom: 0;
+      width: 100%;
+}
+.nav>li>a>img {
+    max-width: 170px;
 }

@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   resources :reminders
    root 'reminders#index'
- 	resource :reminders 
 
  devise_for :users
 
