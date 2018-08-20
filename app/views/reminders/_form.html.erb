@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+<div>
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :timings %>
-    <%= form.datetime_select :timings %>
+    <%= form.datetime_select :timings ,{ampm: true}%>
   </div>
 
   <div class="field">
@@ -39,4 +39,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+</div>
 <% end %>
